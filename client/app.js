@@ -6,6 +6,7 @@ app.controller('IndexController',['$scope','$http',function($scope,$http) {
     $scope.adj = [];
     $scope.noun = [];
     $scope.handles = [];
+    $scope.toggle = true;
     $http.get('/adj').then(function (res) {
         //console.log(res.data);
         $scope.adj = res.data;
@@ -30,5 +31,9 @@ app.controller('IndexController',['$scope','$http',function($scope,$http) {
         randAdj = $scope.adj[randAdj].word;
         randNoun = $scope.noun[randNoun].word;
         return randAdj+randNoun;
+    }
+
+    $scope.showDiv = function () {
+        $scope.toggle = !$scope.toggle;
     }
 }]);

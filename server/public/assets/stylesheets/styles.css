@@ -4,8 +4,41 @@ a {
 
 .navbar{
    background-color: #0084B4;
+    height: 200px;
+}
+
+.navbar-header {
+    color: white;
+    text-transform: uppercase;
+    padding: 70px 0 0 50px;
 }
 
 .btn-primary{
     margin: 0 0 20px 0;
 }
+
+li {
+    list-style-type: none;
+    border: 1px solid lightgray;
+    display: block;
+    width: 225px;
+    padding: 7px 7px 7px 7px;
+    margin-top: 7px;
+    border-radius: 5px;
+
+}
+
+.fa {
+    padding-right: 10px;
+    font-size:1.1em;
+}
+
+li:hover {
+    background-color: #0084B4;
+    color: white;
+}
+
+li:hover > a {
+    color: white;
+}
+

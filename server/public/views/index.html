@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Twittler</title>
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="/assets/stylesheets/styles.css" rel="stylesheet">
 
     <script src="/vendor/angular/angular.min.js"></script>
@@ -13,14 +14,21 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-top"></nav>
+    <nav class="navbar navbar-inverse navbar-top">
+        <h1 class = "navbar-header">Snafu Industries</h1>
+    </nav>
         <div class="container">
             <div ng-controller="IndexController">
-                <button ng-click="genHandles()" class="btn-primary btn-lg">Generate Twitter Handles</button>
+                <button ng-click="genHandles(); showDiv()" class="btn-primary btn-lg">Generate Twitter Handles</button>
+                <div class = "row">
+                <div ng-hide="toggle">
                 <ul>
-                    <li ng-repeat="handle in handles track by $index"><a href="http://www.twitter.com/{{handle}}" target="_blank">@{{handle}}</a></li>
+                    <li ng-repeat="handle in handles track by $index"><i class="fa fa-twitter"></i><a href="http://www.twitter.com/{{handle}}" target="_blank">@{{handle}}</a></li>
                 </ul>
+                </div>
+
             </div>
+        </div>
         </div>
 </body>
 </html>
